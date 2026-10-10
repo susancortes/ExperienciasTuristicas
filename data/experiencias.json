@@ -1,0 +1,17 @@
+[ 
+  {"id":1,"nombre":"Cenote Azul","categoria":"naturaleza","precio":350,"cupo":15,"icono":"🌊"}, 
+  {"id":2,"nombre":"Zona arqueológica","categoria":"cultura","precio":480,"cupo":20,"icono":"🗿"}, 
+  {"id":3,"nombre":"Ruta en tirolesa","categoria":"aventura","precio":750,"cupo":10,"icono":"🌴"}, 
+  {"id":4,"nombre":"Kayak en manglar","categoria":"aventura","precio":680,"cupo":8,"icono":"🛶"}, 
+  {"id":5,"nombre":"Ruta de sabores mayas","categoria":"gastronomia","precio":620,"cupo":12,"icono":"🍲"}, 
+  {"id":6,"nombre":"Santuario de tortugas","categoria":"naturaleza","precio":420,"cupo":18,"icono":"🐢"},
+  {"id":7,"nombre":"Tour gastronómico callejero","categoria":"gastronomia","precio":450,"cupo":10,"icono":"&#127828;" },
+  {"id":8,"nombre":"Plaza La Isla","categoria":"shopping","precio":150,"cupo":12,"icono":"🌅" },
+  {"id":9,"nombre":"Renta de Veleros","categoria":"aventura","precio":400,"cupo":10,"icono":"⛵" },
+  {"id":10,"nombre":"Clase de cocina yucateca","categoria":"gastronomia","precio":600,"cupo":6,"icono":"&#127859;" },
+  {"id":11,"nombre":"Nado con Delfines","categoria":"aventura","precio":1200,"cupo":5,"icono":"&#128044;" },
+  {"id":12,"nombre":"Gran Oulet","categoria":"shopping","precio":200,"cupo":15,"icono":"🌆" },
+  {"id":13,"nombre":"Jardín botánico","categoria":"naturaleza","precio":250,"cupo":12,"icono":"&#127793;" },
+  {"id":14,"nombre":"Tianguis de la 100","categoria":"shopping","precio":100,"cupo":8,"icono":"🛍️" }
+
+]
