@@ -1,56 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Explora Cancún</title>
- <link rel="stylesheet" href="styles.css">
- <script src="app.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora Cancún</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
 </head>
+
 <body>
- <header class="encabezado">
- <h1>Explora Cancún</h1>
- <p>Experiencias naturales y culturales</p>
- </header>
- <main class="contenedor">
- <section class="controles" aria-label="Controles del catálogo">
- <input id="buscador" type="search" placeholder="Buscar experiencia..." aria-label="Buscar experiencia">
- <select id="filtroCategoria" aria-label="Filtrar por categoría">
- <option value="todas">Todas las categorías</option>
- <option value="naturaleza">Naturaleza</option>
- <option value="cultura">Cultura</option>
- <option value="aventura">Aventura</option>
- <option value="gastronomia">Gastronomía</option>
- <option value="acuatico">Acuático</option>
- </select>
- <select id="ordenPrecio" aria-label="Ordenar por precio">
- <option value="normal">Orden original</option>
- <option value="ascendente">Menor precio</option>
- <option value="descendente">Mayor precio</option>
- </select>
- <label class="filtro-precio" for="presupuesto">
- Presupuesto máximo (MXN):
- <input id="presupuesto" type="number" min="0" step="10" inputmode="numeric" placeholder="Ej. 600 (vacío = sin límite)">
- </label>
- </section>
- <p id="estado" class="estado" role="status" aria-live="polite">Cargando experiencias...</p>
- <p id="mensaje" class="mensaje" role="alert" hidden></p>
- <section id="catalogo" class="catalogo"></section>
- <section class="resumen" aria-labelledby="tituloReserva">
- <h2 id="tituloReserva">Mi reservación</h2>
- <div id="listaReservas"><p>No hay experiencias seleccionadas.</p></div>
- <p class="personas">Personas reservadas: <span id="totalPersonas">0</span></p>
- <p class="total">Total: <span id="total">$0 MXN</span></p>
- <div class="acciones-vaciar">
- <button id="btnVaciar" class="btn-vaciar" type="button" hidden>Vaciar reservación</button>
- <div id="confirmacion" class="confirmacion" role="alertdialog" aria-label="Confirmar vaciado" hidden>
- <p>¿Seguro que deseas eliminar toda la reservación?</p>
- <button id="btnConfirmarVaciar" class="btn-eliminar" type="button">Sí, vaciar</button>
- <button id="btnCancelarVaciar" class="btn-cancelar" type="button">Cancelar</button>
- </div>
- </div>
- </section>
- </main>
- <footer><p>Proyecto académico de frontend</p></footer>
+    <header class="encabezado">
+        <h1>Explora Cancún</h1>
+        <p>Experiencias naturales y culturales</p>
+    </header>
+    <main class="contenedor">
+        <section class="controles" aria-label="Controles del catálogo">
+            <input id="buscador" type="search" placeholder="Buscar experiencia..." aria-label="Buscar experiencia">
+            <select id="filtroCategoria" aria-label="Filtrar por categoría">
+                <option value="todas">Todas las categorías</option>
+                <option value="naturaleza">Naturaleza</option>
+                <option value="cultura">Cultura</option>
+                <option value="aventura">Aventura</option>
+                <option value="gastronomia">Gastronomía</option>
+                <option value="acuatico">Acuático</option>
+            </select>
+            <select id="ordenPrecio" aria-label="Ordenar por precio">
+                <option value="normal">Orden original</option>
+                <option value="ascendente">Menor precio</option>
+                <option value="descendente">Mayor precio</option>
+            </select>
+            <label class="filtro-precio" for="presupuesto">
+                Presupuesto máximo (MXN):
+                <input id="presupuesto" type="number" min="0" step="10" inputmode="numeric"
+                    placeholder="Ej. 600 (vacío = sin límite)">
+            </label>
+        </section>
+        <p id="estado" class="estado" role="status" aria-live="polite">Cargando experiencias...</p>
+        <p id="mensaje" class="mensaje" role="alert" hidden></p>
+        <section id="catalogo" class="catalogo"></section>
+        <section class="resumen" aria-labelledby="tituloReserva">
+            <h2 id="tituloReserva">Mi reservación</h2>
+            <div id="listaReservas">
+                <p>No hay experiencias seleccionadas.</p>
+            </div>
+            <p class="personas">Personas reservadas: <span id="totalPersonas">0</span></p>
+            <p class="total">Total: <span id="total">$0 MXN</span></p>
+            <div class="acciones-vaciar">
+                <button id="btnVaciar" class="btn-vaciar" type="button" hidden>Vaciar reservación</button>
+                <div id="confirmacion" class="confirmacion" role="alertdialog" aria-label="Confirmar vaciado" hidden>
+                    <p>¿Seguro que deseas eliminar toda la reservación?</p>
+                    <button id="btnConfirmarVaciar" class="btn-eliminar" type="button">Sí, vaciar</button>
+                    <button id="btnCancelarVaciar" class="btn-cancelar" type="button">Cancelar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="modal-aviso" class="modal-overlay hidden">
+        <div class="modal-card">
+            <h3 class="modal-title">Aviso</h3>
+            <p id="modal-mensaje" class="modal-text">La cantidad supera el cupo disponible</p>
+            <div class="modal-actions">
+                <button id="modal-btn-aceptar" class="modal-btn">Aceptar</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Proyecto académico de frontend</p>
+    </footer>
 </body>
+
 </html>
